@@ -8,7 +8,7 @@
             body {
                 background: #e3e3e3;
                 padding: 2em;
-                text-align: center;
+                text-align: left;
         }
         </style>
     </head>
@@ -16,47 +16,14 @@
 
     <body>
 
-        <h1>
-            Hello
-        </h1>
+        <ul>
 
-        <p>
-            <ul>
-                <!-- <li></li> -->
+            <?php foreach ($task as $what => $how): ?>
 
-                <?php
-                foreach ($farm as $animal) {
-                    echo "<li>$animal</li>";
-                }
-                ?>
-            </ul>
-        </p>
+                <li> <strong> <?= $what ?> </strong> <?= $how; ?> </li>
 
-        <p>
-            <ol>
-                <?php foreach ($farm as $animal) : ?>
-
-                    <li><?= $animal; ?></li>
-
-                <?php endforeach; ?>
-            </ol>
-        </p>
-
-        <p>
-            <ul>
-                <?php foreach ($cars as $brand) {
-                    echo "<li>$brand</li>"; 
-                } ?>
-            </ul>
-        </p>
-
-        <p>
-            <ol>
-                <?php foreach ($cars as $brand) : ?>
-                <li><?= $brand;?> </li>
-                <?php endforeach; ?>
-            </ol>
-        </p>
+            <?php endforeach; ?>
+        </ul>
 
     </body>
 

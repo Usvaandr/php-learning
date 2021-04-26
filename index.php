@@ -1,30 +1,34 @@
 <?php 
 
-// $greeting = "Hello World!";
+// $animals = [ 'dog', 'cat'];
 
-$farm = [
-    'Chicken',
-    'Horse',
-    'Pig',
-    'Turkej',
-    'Lion'
-];
+// $animals[] = 'elephant';
 
-// foreach ($farm as $animal) {
+// $hooman = [
+//     'age' => 28, 
+//     'hair' => 'brown',
+//     'dream' => 'developer'
+// ];
 
-// }
+// $hooman['name'] = 'Andrius';
+
+// unset($hooman['age']);
+
+$task = [
+    'Title' => 'Complete 5 video lessons',
+    'Due' => 'Sunday',
+    'Assigned To' => 'Me',
+    'Completed' => 'No'
+]; //title, due, assigned_to; completed;
 
 
-// foreach ($names as $name) {
-//     echo $name . ', ';
-// }
 
-$cars = [
-    'Subaru',
-    'BMW',
-    'Audi',
-    'Volvo',
-    'Mercedes Benz'
-];
+
+
+
+
+// echo $hooman['age'];
+
+// die(var_dump($hooman));
 
 require 'index.view.php';
