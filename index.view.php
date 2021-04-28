@@ -37,8 +37,42 @@
             <strong>Person responsible: </strong> <?= $task['assigned to:']; ?>
         </li>
         <li>
-            <strong>Status: </strong> <?= $task['completed:'] ? 'Complete' : 'Incomplete'; ?>
+            <strong>Status: </strong>
+
+            <?php if ($task['completed:']) {
+                echo '&#9989';
+            }   else {
+                echo 'Incomplete';
+            }
+            ?>
         </li>
+        <li>
+            <strong>Status 2: </strong>
+            <?php if ($task['completed:']) : ?>
+
+                <span> &#9989 </span>
+
+            <?php else : ?>
+
+                <span> Incomplete </span>
+            
+            <?php endif; ?>
+
+        </li>
+
+        <li>
+            <strong> Dose of coffee already injected?: </strong>
+            <?php if ($task['coffee']) : ?>
+
+                Yes
+            
+            <?php else : ?>
+
+                Waiting
+
+            <?php endif; ?>
+        </li>
+
     </body>
 
 </html>

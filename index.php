@@ -18,7 +18,8 @@ $task = [
     'title:' => 'Complete 5 video lessons',
     'due:' => 'Sunday',
     'assigned to:' => 'Me',
-    'completed:' => false 
+    'completed:' => true,
+    'coffee' => true
 ];
 
 
