@@ -15,11 +15,13 @@
 // unset($hooman['age']);
 
 $task = [
-    'Title' => 'Complete 5 video lessons',
-    'Due' => 'Sunday',
-    'Assigned To' => 'Me',
-    'Completed' => 'No'
-]; //title, due, assigned_to; completed;
+    'title:' => 'Complete 5 video lessons',
+    'due:' => 'Sunday',
+    'assigned to:' => 'Me',
+    'completed:' => false 
+];
+
+
 
 
 
@@ -28,7 +30,6 @@ $task = [
 
 
 // echo $hooman['age'];
-
 // die(var_dump($hooman));
 
 require 'index.view.php';
