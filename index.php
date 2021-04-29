@@ -1,36 +1,17 @@
 <?php 
 
-// $animals = [ 'dog', 'cat'];
+require 'functions.php';
 
-// $animals[] = 'elephant';
-
-// $hooman = [
-//     'age' => 28, 
-//     'hair' => 'brown',
-//     'dream' => 'developer'
-// ];
-
-// $hooman['name'] = 'Andrius';
-
-// unset($hooman['age']);
-
-$task = [
-    'title:' => 'Complete 5 video lessons',
-    'due:' => 'Sunday',
-    'assigned to:' => 'Me',
-    'completed:' => true,
-    'coffee' => true
-];
+$animals = ['dogs', 'cats'];
 
 
 
 
+dd($animals);
 
+checkAge(20);
 
+echo checkAge2(50);
 
-
-
-// echo $hooman['age'];
-// die(var_dump($hooman));
 
 require 'index.view.php';
