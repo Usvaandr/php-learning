@@ -1,17 +1,36 @@
 <?php 
 
-require 'functions.php';
+// require 'functions.php';
 
-$animals = ['dogs', 'cats'];
+class Task {
+    public $description;
 
+    public $completed = false;
 
+    public function __construct($description)
+    {
+        // Automatically trigerred on instantiantion
+        $this->description = $description;
+    }
 
+    public function complete() {
+        $this->completed = true;
+    }
 
-dd($animals);
+    public function isComplete(){
+        return $this->completed;
+    }
+}
 
-checkAge(20);
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Buy veggies'),
+    new Task('Go to basketball')
+];
 
-echo checkAge2(50);
+$tasks[0]->complete();
 
+// dd($task);
+// var_dump($task->isComplete());
 
 require 'index.view.php';
