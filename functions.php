@@ -1,5 +1,21 @@
 <?php
 
+function connectToDb() {
+    try {
+        return $pdo = new PDO('mysql:host=localhost;dbname=mytodo', 'root', 'Password1?');
+    } catch (PDOException $e) {
+        die($e->getMessage());
+    }
+}
+
+function fetchAllTasks($pdo) {
+    $statement = $pdo->prepare('select * from todos');
+
+    $statement->execute();
+    
+    return $tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+}
+
 function dd($value){
     echo '<pre>';
     var_dump($value);

@@ -13,7 +13,6 @@
         </style>
     </head>
 
-hello
     <body>
         <ul>
             <?php foreach ($tasks as $task) : ?>             
@@ -21,7 +20,7 @@ hello
                     <?php if ($task->completed) : ?>
                         <strike> <?= $task->description; ?> </strike>
                     <?php else: ?>
-                    <?= $task->description; ?>
+                        <?= $task->description; ?>
                     <?php endif; ?>
                 </li>
             <?php endforeach; ?>
