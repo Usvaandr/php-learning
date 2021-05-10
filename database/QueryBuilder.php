@@ -2,6 +2,7 @@
 // QueryBuilder filel is responsible for building sql queries. 
 // in this case we have one case to select everyting from particular table. 
 // in order for this to work, we need PDO instance
+
 class QueryBuilder
 {
     protected $pdo;
