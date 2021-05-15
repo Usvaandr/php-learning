@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTS-8">
-        <title>Learning PHP</title>
+    <?php require('partials/head.php'); ?>
 
-        <style>
-            body {
-                background: #e3e3e3;
-                padding: 2em;
-                text-align: left;
-        }
-        </style>
-    </head>
-
-    <body>
+        <h1>Home Page</h1>
         <ul>
             <?php foreach ($tasks as $task) : ?>             
                 <li> 
@@ -25,6 +12,5 @@
                 </li>
             <?php endforeach; ?>
         </ul>
-    </body>
 
-</html>
+<?php require('partials/footer.php'); ?>
