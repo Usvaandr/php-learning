@@ -1,8 +1,7 @@
 <?php
+// $tasks = $app['database']->selectAll('todos'); //this is where we list all tasks from todo table.
 
-
-// $tasks = $app['database']->selectAll('todos');
 
 $users = $app['database']->selectAll('users');
 
-require 'views/index.view.php';
+require 'views/index.view.php'; 
