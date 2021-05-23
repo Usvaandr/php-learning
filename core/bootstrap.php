@@ -1,17 +1,18 @@
 <?php
 // like a factory file. Where it build the QueryBuilder.
 
-$app = [];
+App::bind('config', require 'config.php');
 
-$app['config'] = require 'config.php';
+// die(var_dump(App::get('config')));
 
-// removed all the links below because we installed composer autoloader
 
-// require 'core/Router.php';
-// require 'core/Request.php';
-// require 'core/database/Connection.php';
-// require 'core/database/QueryBuilder.php';
+// App::bind('foo', 'bar');
+// die(App::get('foo'));
 
-$app['database'] = new QueryBuilder(
-    Connection::make($app['config']['database'])
-);
+
+// $config = App::get('config');
+
+
+App::bind('database', new QueryBuilder(
+    Connection::make(App::get('config')['database'])
+));

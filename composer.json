@@ -1,7 +1,6 @@
 {
     "autoload": {
-        "classmap": [
-            "./"
-        ]
+        "classmap": ["./"],
+        "exclude-from-classmap": ["/arrays", "/vendor", "/composer"]
     }
 }
